@@ -71,4 +71,6 @@ class CustomersController < ApplicationController
     def customer_params
       params.require(:customer).permit(:name, :discount)
     end
+
+  
 end

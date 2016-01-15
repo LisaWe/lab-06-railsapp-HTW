@@ -17,3 +17,4 @@ FactoryGirl.define do
     size  'XXS'
     price '0.33'
   end
+end
