@@ -32,15 +32,6 @@ describe "the customer page with order list", :type => :feature do
   it "orders on customer page" do
     visit '/customers/'+@customer.id.to_s
     expect(page).to have_content "Dagobert"
-    expect(page).to have_content "waiting"
+    expect(page).to have_content "waiting", count 5
   end
-  # it "order has the right date" do
-  #   expect (@order.placed_on.to_s).to eq (3.days.ago.to_s)
-  # end
-  # it "customer's orders on customer page" do
-  #   visit '/customers/'+@customer.id.to_s
-  #   @orders = @customer.orders
-  #   expect(page).to have_content "waiting"
-  # end
-
 end
