@@ -6,7 +6,6 @@ FactoryGirl.define do
     price '7.25'
   end
   factory :fruityHokkaido, class: Pumpkin do
-<<<<<<< HEAD
     name 'fruityHokkaido '
     color 'white, red-dotted'
     size  'S'
@@ -14,15 +13,6 @@ FactoryGirl.define do
   end
   factory :cryspyHokkaido, class: Pumpkin do
     name 'cryspyHokkaido'
-=======
-    name 'fruityHokkaido'
-    color 'white, red dotted'
-    size  'S'
-    price '10.0'
-  end
-  factory :crispyHokkaido, class: Pumpkin do
-    name 'crispyHokkaido'
->>>>>>> master
     color 'caramel-brown'
     size  'XXS'
     price '0.33'

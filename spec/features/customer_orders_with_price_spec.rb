@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe "customer page with total order price", :type => :feature do
   before :each do
-    @customer = create(:customer_orders_with_price)
+    @customer = create(:customer_with_priced_orders)
     @id = @customer.id
   end
 
@@ -16,7 +16,7 @@ describe "customer page with total order price", :type => :feature do
 
   it "order has price" do
     @order = Order.find(@id)
-    expect(@order.price).to eq 10.6
+    expect(@order.price).to eq 6456.0
   end
 
   it "get multiple orders" do
@@ -27,15 +27,15 @@ describe "customer page with total order price", :type => :feature do
 
  it "number of orders" do
    @orders = Customer.where(name: "Daisy").first.orders
-   expect(@orders.size).to eq 3
+   expect(@orders.size).to eq 5
  end
 
  it "orders on customer page" do
    visit '/customers/'+@customer.id.to_s
    expect(page).to have_content "Daisy"
    expect(page).to have_content "new"
-   expect(page).to have_content "10.6"
+   expect(page).to have_content "6456.0"
    expect(page).to have_content "Total: "
-   expect(page).to have_content "31.8"
+   expect(page).to have_content "6456.0"
  end
 end
