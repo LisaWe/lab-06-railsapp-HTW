@@ -15,9 +15,9 @@
 
     <% @pumpkins.each do |pumpkin| %>
       <tr>
-        <td><%= pumpkin.name.downcase %></td>
-        <td><%= pumpkin.color.downcase %></td>
-        <td><%= pumpkin.size.downcase %></td>
+        <td><%= pumpkin.name %></td>
+        <td><%= pumpkin.color %></td>
+        <td><%= pumpkin.size %></td>
         <td><%= pumpkin.price %></td>
         <td><%= link_to 'Show', pumpkin %></td>
         <td><%= link_to 'Edit', edit_pumpkin_path(pumpkin) %></td>
